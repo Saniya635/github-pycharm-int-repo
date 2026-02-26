@@ -1,0 +1,45 @@
+#lab assignment 1
+print("Enter integers separated by space:")
+data = input()
+nums_list = list(map(int, data.split()))
+nums = tuple(nums_list)
+print("\nTuple entered is:", nums)
+# a)
+print("Total number of elements in tuple =", len(nums))
+# b)
+print("Last element in tuple =", nums[-1])
+# c)
+print("Tuple in reverse order =", nums[::-1])
+# d)
+if 5 in nums:
+    print("Yes, 5 is present in the tuple")
+else:
+    print("No, 5 is not present in the tuple")
+# e)
+if len(nums) > 2:
+    new_tuple = nums[1:-1]
+    sorted_tuple = tuple(sorted(new_tuple))
+    print("After removing first and last and sorting:", sorted_tuple)
+else:
+    print("Not enough elements to remove first and last")
+
+    #Lab Assignment 2
+    print("Enter the prices of items sold (separated by space):")
+    data = input()
+    price_list = list(map(int, data.split()))
+    prices = tuple(price_list)
+    print("\nPrices tuple =", prices)
+    # a)
+    print("Total number of items sold =", len(prices))
+    # b)
+    cheapest = min(prices)
+    print("Cheapest item price =", cheapest)
+    # c)
+    costliest = max(prices)
+    print("Costliest item price =", costliest)
+    # d)
+    ascending_prices = tuple(sorted(prices))
+    print("Prices in ascending order =", ascending_prices)
+    # e)
+    count_costliest = prices.count(costliest)
+    print("Number of costliest items sold =", count_costliest)
